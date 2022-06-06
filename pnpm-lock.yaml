@@ -11,7 +11,7 @@ specifiers:
   '@microsoft/sp-property-pane': 1.14.0
   '@microsoft/sp-tslint-rules': 1.14.0
   '@microsoft/sp-webpart-base': 1.14.0
-  '@pnp/sp': 3.3.2
+  '@pnp/sp': 3.2.0
   '@types/react': 16.9.51
   '@types/react-dom': 16.9.8
   '@types/webpack-env': 1.13.1
@@ -30,7 +30,7 @@ dependencies:
   '@microsoft/sp-office-ui-fabric-core': 1.14.0
   '@microsoft/sp-property-pane': 1.14.0_fb981ad68f3726d64f8884face7d1e15
   '@microsoft/sp-webpart-base': 1.14.0_fb981ad68f3726d64f8884face7d1e15
-  '@pnp/sp': 3.3.2
+  '@pnp/sp': 3.2.0
   office-ui-fabric-react: 7.174.1_d71069ea3ea61a1f7cb5d86912297c7e
   react: 16.13.1
   react-dom: 16.13.1_react@16.13.1
@@ -1531,28 +1531,27 @@ packages:
     deprecated: Package renamed to @opentelemetry/api, see https://github.com/open-telemetry/opentelemetry-js
     dev: true
 
-  /@pnp/core/3.3.2:
-    resolution: {integrity: sha512-P1/0Uvd3hrjUoveuQCcX8fbROtcBsP51fKegpPgsgEzkZstKhSBSgz6lpdN708+6xzLY3vULSniP+vOrqniNHQ==}
+  /@pnp/core/3.2.0:
+    resolution: {integrity: sha512-QuIZLwWBoTk4+ftuNFyooZl4894IF/JiXdukz6pdTN1VwKR7qh5GbM0yurdkiRu4imReHJAGZXw9FgVa/180Jw==}
     engines: {node: '>=14.15.1'}
     dependencies:
       tslib: 2.3.1
     dev: false
 
-  /@pnp/queryable/3.3.2:
-    resolution: {integrity: sha512-GPRVfauThWeGryUQ077FhPSnUfGXHqJWvbBlDk1CaWMq6XFq+NUeW6PplotGuECP+4wFl/yPks1rEKafy1WBfg==}
+  /@pnp/queryable/3.2.0:
+    resolution: {integrity: sha512-PZo/4o3jZgkYFt1usF5pFv4Ce73RurF+C55V75g+kNjTQwj7PerWHQvwhorHYZZtBFRMv5YDnXKCvi8DFng1pQ==}
     engines: {node: '>=14.15.1'}
     dependencies:
-      '@pnp/core': 3.3.2
+      '@pnp/core': 3.2.0
       tslib: 2.3.1
     dev: false
 
-  /@pnp/sp/3.3.2:
-    resolution: {integrity: sha512-ac3bN0+eaGIpvLNDbAxtUYqif0RhwpEkuj9zSCHt3FsYAStkcWatsQ2ka4d/CAXY0VKa4DAlqtO6EJp/sGp6XQ==}
+  /@pnp/sp/3.2.0:
+    resolution: {integrity: sha512-vfMt26C8uE88jsQkwnONmb/PjaB1YjsjnVnl1Vnvlx3sga9oFN1QuucNg8zeIN+bsaLuEMsJpzWpZ/PV3gVjGw==}
     engines: {node: '>=14.15.1'}
-    requiresBuild: true
     dependencies:
-      '@pnp/core': 3.3.2
-      '@pnp/queryable': 3.3.2
+      '@pnp/core': 3.2.0
+      '@pnp/queryable': 3.2.0
       tslib: 2.3.1
     dev: false
 

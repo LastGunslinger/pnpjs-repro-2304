@@ -6,14 +6,14 @@ import '@pnp/sp/webs'
 import * as React from 'react'
 import { useState } from 'react'
 import { QueryClient, QueryClientProvider } from 'react-query'
-import { useCurrentUser } from '../hooks/users'
+import { useCurrentUserPrincipal } from '../hooks/users'
 import { IPnPjsRepro2304Props } from './IPnPjsRepro2304Props'
 import styles from './PnPjsRepro2304.module.scss'
 
 
 const PnPjsRepro2304: React.FC<IPnPjsRepro2304Props> = (props) => {
 	const { hasTeamsContext, isDarkTheme, userDisplayName, environmentMessage, description } = props
-	const currentUser = useCurrentUser(props.context)
+	const currentUser = useCurrentUserPrincipal(props.context)
 
 
 	return (
@@ -39,7 +39,7 @@ const PnPjsRepro2304: React.FC<IPnPjsRepro2304Props> = (props) => {
 					<li><a href="https://aka.ms/spfx-yeoman-api" target="_blank">SharePoint Framework API reference</a></li>
 					<li><a href="https://aka.ms/m365pnp" target="_blank">Microsoft 365 Developer Community</a></li>
 				</ul>
-				<p>{currentUser?.Title} is {currentUser?.userIsOwner ? '' : 'not '}a site owner</p>
+				<p>{currentUser?.DisplayName} is {currentUser?.userIsOwner ? '' : 'not '}a site owner</p>
 			</div>
 		</section >
 	)
