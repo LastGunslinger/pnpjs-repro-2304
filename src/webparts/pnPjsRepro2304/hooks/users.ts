@@ -1,12 +1,11 @@
-import { QueryClient, useQuery } from 'react-query'
-import { PrincipalSource, PrincipalType, spfi, SPFx } from '@pnp/sp'
-import '@pnp/sp'
-import '@pnp/sp/webs'
-import '@pnp/sp/site-users'
-import '@pnp/sp/security'
-import '@pnp/sp/sputilities'
 import { WebPartContext } from '@microsoft/sp-webpart-base'
-import { PermissionKind } from '@pnp/sp/security'
+import '@pnp/sp'
+import { PrincipalSource, PrincipalType, spfi, SPFx } from '@pnp/sp'
+import '@pnp/sp/security'
+import '@pnp/sp/site-users'
+import '@pnp/sp/sputilities'
+import '@pnp/sp/webs'
+import { useQuery } from 'react-query'
 
 
 export const useCurrentUserPrincipal = (context: WebPartContext) => {
@@ -25,9 +24,7 @@ export const useCurrentUserPrincipal = (context: WebPartContext) => {
 				true,
 			)
 
-			const userIsOwner = await sp.web.currentUserHasPermissions(PermissionKind.ManageWeb)
-
-			return { ...userPrincipal, userIsOwner }
+			return userPrincipal
 		}
 	)
 

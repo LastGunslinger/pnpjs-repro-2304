@@ -39,7 +39,7 @@ const PnPjsRepro2304: React.FC<IPnPjsRepro2304Props> = (props) => {
 					<li><a href="https://aka.ms/spfx-yeoman-api" target="_blank">SharePoint Framework API reference</a></li>
 					<li><a href="https://aka.ms/m365pnp" target="_blank">Microsoft 365 Developer Community</a></li>
 				</ul>
-				<p>{currentUser?.DisplayName} is {currentUser?.userIsOwner ? '' : 'not '}a site owner</p>
+				<p>UserPrincipal DisplayName: {currentUser?.DisplayName ?? ''}</p>
 			</div>
 		</section >
 	)
