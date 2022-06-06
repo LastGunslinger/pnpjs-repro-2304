@@ -11,7 +11,7 @@ specifiers:
   '@microsoft/sp-property-pane': 1.14.0
   '@microsoft/sp-tslint-rules': 1.14.0
   '@microsoft/sp-webpart-base': 1.14.0
-  '@pnp/sp': 3.3.2
+  '@pnp/sp': 2.13.0
   '@types/react': 16.9.51
   '@types/react-dom': 16.9.8
   '@types/webpack-env': 1.13.1
@@ -30,7 +30,7 @@ dependencies:
   '@microsoft/sp-office-ui-fabric-core': 1.14.0
   '@microsoft/sp-property-pane': 1.14.0_fb981ad68f3726d64f8884face7d1e15
   '@microsoft/sp-webpart-base': 1.14.0_fb981ad68f3726d64f8884face7d1e15
-  '@pnp/sp': 3.3.2
+  '@pnp/sp': 2.13.0
   office-ui-fabric-react: 7.174.1_d71069ea3ea61a1f7cb5d86912297c7e
   react: 16.13.1
   react-dom: 16.13.1_react@16.13.1
@@ -1531,29 +1531,33 @@ packages:
     deprecated: Package renamed to @opentelemetry/api, see https://github.com/open-telemetry/opentelemetry-js
     dev: true
 
-  /@pnp/core/3.3.2:
-    resolution: {integrity: sha512-P1/0Uvd3hrjUoveuQCcX8fbROtcBsP51fKegpPgsgEzkZstKhSBSgz6lpdN708+6xzLY3vULSniP+vOrqniNHQ==}
-    engines: {node: '>=14.15.1'}
+  /@pnp/common/2.13.0:
+    resolution: {integrity: sha512-bhQzjryaTcLzxtxFH/uBrR434AePfq6dQ2NoehvEKeCsvoQXfBRP0zsfMR2072sAe7d68n2Y7MxtTJgS+1Qrsg==}
     dependencies:
-      tslib: 2.3.1
+      tslib: 2.3.0
     dev: false
 
-  /@pnp/queryable/3.3.2:
-    resolution: {integrity: sha512-GPRVfauThWeGryUQ077FhPSnUfGXHqJWvbBlDk1CaWMq6XFq+NUeW6PplotGuECP+4wFl/yPks1rEKafy1WBfg==}
-    engines: {node: '>=14.15.1'}
+  /@pnp/logging/2.13.0:
+    resolution: {integrity: sha512-XBZQzxnaYoZPFlVnZp5m1RRp252l1ufrt1jz8UPU4cn36423Th9VAOIRPXXlChW3wZSQU0acaEeoJUKrKDaNEg==}
     dependencies:
-      '@pnp/core': 3.3.2
-      tslib: 2.3.1
+      tslib: 2.3.0
     dev: false
 
-  /@pnp/sp/3.3.2:
-    resolution: {integrity: sha512-ac3bN0+eaGIpvLNDbAxtUYqif0RhwpEkuj9zSCHt3FsYAStkcWatsQ2ka4d/CAXY0VKa4DAlqtO6EJp/sGp6XQ==}
-    engines: {node: '>=14.15.1'}
-    requiresBuild: true
+  /@pnp/odata/2.13.0:
+    resolution: {integrity: sha512-L4Vl9w8fsiiHyXsRCVPTOB7X7dnjEaOUPFOrWnCBTKhWwZr6DIgCFMFbpfAFFtYwgWIvKKNFy0t+Yz4KF8yn8g==}
     dependencies:
-      '@pnp/core': 3.3.2
-      '@pnp/queryable': 3.3.2
-      tslib: 2.3.1
+      '@pnp/common': 2.13.0
+      '@pnp/logging': 2.13.0
+      tslib: 2.3.0
+    dev: false
+
+  /@pnp/sp/2.13.0:
+    resolution: {integrity: sha512-wCNKVywcd6DXqqmzx4Io7xCsxwBA3IxWPJ6ihV6fR1XjZKvKFl2xUwAiB4Xt4AFsNzquWW6AteyCBwj3nUJ3dw==}
+    dependencies:
+      '@pnp/common': 2.13.0
+      '@pnp/logging': 2.13.0
+      '@pnp/odata': 2.13.0
+      tslib: 2.3.0
     dev: false
 
   /@pnpm/error/1.4.0:
@@ -12430,8 +12434,8 @@ packages:
   /tslib/1.14.1:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
 
-  /tslib/2.3.1:
-    resolution: {integrity: sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==}
+  /tslib/2.3.0:
+    resolution: {integrity: sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==}
     dev: false
 
   /tslib/2.4.0:
