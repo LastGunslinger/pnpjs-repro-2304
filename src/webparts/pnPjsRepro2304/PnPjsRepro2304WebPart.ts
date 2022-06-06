@@ -5,12 +5,12 @@ import {
 	PropertyPaneTextField
 } from '@microsoft/sp-property-pane'
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base'
+import * as strings from 'PnPjsRepro2304WebPartStrings'
 import * as React from 'react'
 import * as ReactDom from 'react-dom'
-
-import * as strings from 'PnPjsRepro2304WebPartStrings'
 import { IPnPjsRepro2304Props } from './components/IPnPjsRepro2304Props'
 import { QueryWrapper } from './components/PnPjsRepro2304'
+
 
 export interface IPnPjsRepro2304WebPartProps {
 	description: string
