@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "pnpjs-repro-2304-client-side-solution",
+    "id": "8819b98a-3597-4b0f-8077-fcfa7d19fd6f",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.14.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "pnpjs-repro-2304 description"
+      },
+      "longDescription": {
+        "default": "pnpjs-repro-2304 description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "pnpjs-repro-2304 Feature",
+        "description": "The feature that activates elements of the pnpjs-repro-2304 solution.",
+        "id": "fd59db1d-2207-4b7a-82ee-5565ed78326a",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/pnpjs-repro-2304.sppkg"
+  }
+}
