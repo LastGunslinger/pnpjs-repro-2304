@@ -5,6 +5,7 @@ import {
 	PropertyPaneTextField
 } from '@microsoft/sp-property-pane'
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base'
+import { spfi, SPFI, SPFx } from '@pnp/sp'
 import * as strings from 'PnPjsRepro2304WebPartStrings'
 import * as React from 'react'
 import * as ReactDom from 'react-dom'
@@ -20,11 +21,16 @@ export default class PnPjsRepro2304WebPart extends BaseClientSideWebPart<IPnPjsR
 
 	private _isDarkTheme: boolean = false;
 	private _environmentMessage: string = '';
+	private spfi: SPFI
 
 	protected async onInit(): Promise<void> {
 		this._environmentMessage = this._getEnvironmentMessage()
 
 		await super.onInit()
+
+		if (!this.spfi) {
+			this.spfi = spfi().using(SPFx(this.context))
+		}
 	}
 
 	public render(): void {
@@ -36,7 +42,7 @@ export default class PnPjsRepro2304WebPart extends BaseClientSideWebPart<IPnPjsR
 				environmentMessage: this._environmentMessage,
 				hasTeamsContext: !!this.context.sdks.microsoftTeams,
 				userDisplayName: this.context.pageContext.user.displayName,
-				context: this.context,
+				spfi: this.spfi,
 			}
 		)
 

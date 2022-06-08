@@ -13,7 +13,7 @@ import styles from './PnPjsRepro2304.module.scss'
 
 const PnPjsRepro2304: React.FC<IPnPjsRepro2304Props> = (props) => {
 	const { hasTeamsContext, isDarkTheme, userDisplayName, environmentMessage, description } = props
-	const currentUser = useCurrentUserPrincipal(props.context)
+	const currentUser = useCurrentUserPrincipal(props.spfi)
 
 
 	return (

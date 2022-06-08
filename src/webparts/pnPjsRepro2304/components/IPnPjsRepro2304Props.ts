@@ -1,4 +1,4 @@
-import { WebPartContext } from '@microsoft/sp-webpart-base'
+import { SPFI } from '@pnp/sp'
 
 export interface IPnPjsRepro2304Props {
 	description: string
@@ -6,5 +6,5 @@ export interface IPnPjsRepro2304Props {
 	environmentMessage: string
 	hasTeamsContext: boolean
 	userDisplayName: string
-	context: WebPartContext
+	spfi: SPFI
 }
