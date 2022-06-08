@@ -12,7 +12,6 @@ export const useCurrentUserPrincipal = (spfi: SPFI) => {
 	const userInfo = useQuery(
 		['currentUser'],
 		async () => {
-			// const spfi = spfi().using(SPFx(context))
 			const user = await spfi.web.currentUser()
 			const userPrincipal = await spfi.utility.resolvePrincipal(
 				user.LoginName,
